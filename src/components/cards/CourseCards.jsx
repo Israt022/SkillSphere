@@ -16,13 +16,17 @@ const CourseCards = ({course,isHighlighted}) => {
             }
         `}
           >
-            <Image
-              src={course?.image}
-              alt={course?.title}
-              width={400}
-              height={250}
-              className="w-full rounded-md h-48 object-cover"
-            />
+            <div>
+                <Image
+                    src={course?.image}
+                    alt={course?.title}
+                    // fill
+                    // sizes='(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 33vw'
+                    width={500}
+                    height={400}
+                    className="object-cover rounded-xl w-full h-60"
+                    />
+            </div>
 
             <div className="p-4">
               <h3 className="text-lg font-semibold">{course.title}</h3>
