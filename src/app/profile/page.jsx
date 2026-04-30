@@ -27,7 +27,7 @@ const ProfilePage = () => {
         </div>
 
         {/* Info */}
-        <h2 className="text-2xl font-bold mt-4">{user.name}</h2>
+        <h2 className="text-2xl font-bold mt-4">{user?.name}</h2>
 
         <p className="text-gray-500">{user?.email}</p>
 

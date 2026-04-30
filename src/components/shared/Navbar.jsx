@@ -11,9 +11,9 @@ import { Avatar, Button } from "@heroui/react";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const userData = authClient.useSession();
-  const user = userData.data?.user;
-  console.log(user);
+  const {data,isPending} = authClient.useSession();
+  const user = data?.user;
+  console.log({user,isPending});
   const handleLogout = async() => {
     await authClient.signOut();
   };
@@ -48,7 +48,7 @@ const Navbar = () => {
           {/* Right Side */}
           <div className="hidden md:flex items-center space-x-3">
             {/* Auth UI */}
-            {!user ? (
+            {isPending ? <p>Loading...</p> : !user ? (
             <>
               <Link
                   href="/signin"
@@ -67,23 +67,23 @@ const Navbar = () => {
              ) : ( 
             <div className="flex items-center gap-3">
               {/* Avatar */}
-              <Avatar>
+              {/* <Avatar>
                 <Avatar.Image
                   alt={user?.name}
                   sizes="sm"
                   src={ user?.image || userAvatar}
                 />
               <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-              </Avatar>
-              {/* <Image
+              </Avatar> */}
+              <Image
                 src={ user?.image || userAvatar}
                 width={40}
                 height={40}
                 alt="User Image"
                 className="rounded-full"
-              /> */}
+              />
               <Button
-                onClick={handleLogout}
+                onClick={async()=> await authClient.signOut()}
                 size="sm"
                 variant="danger"
               >
@@ -99,7 +99,7 @@ const Navbar = () => {
                   </Link>
 
                   <button
-                    onClick={handleLogout}
+                    onClick={async()=> await authClient.signOut()}
                     className="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-500"
                   >
                     Logout

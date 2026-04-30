@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 𝓢𝓴𝓲𝓵𝓵𝓢𝓹𝓱𝓮𝓻𝓮  – Online Learning Platform 
 
-## Getting Started
+A modern and responsive online learning platform where users can explore courses, view detailed lessons, and enroll in skill-based programs such as Web Development, UI/UX Design, Digital Marketing, and more.
 
-First, run the development server:
+The platform is built with **Next.js App Router**, **Tailwind CSS**, **HeroUI**, and **Better Auth** for authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Live Demo
+👉 https://skill-sphere-kohl.vercel.app
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+### 🏠 Home Page
+- Animated hero section with gradient text
+- Popular courses (Top 3 highest-rated)
+- Learning tips section
+- Top instructors showcase
+- Trending / New releases section
 
-To learn more about Next.js, take a look at the following resources:
+### 📚 Courses
+- All courses listing page
+- Search functionality (search by title)
+- Course cards with image, rating, instructor
+- Responsive grid layout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📖 Course Details (Protected Route)
+- Full course information
+- Static course curriculum section
+- Instructor details, rating, duration
+- Redirect to login if not authenticated
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔐 Authentication System
+- Email & Password login
+- Google authentication
+- Secure registration system
+- Redirect after login/logout
+- Protected routes using session
 
-## Deploy on Vercel
+### 👤 Profile Page
+- User profile display
+- Update name & image feature
+- Session-based user data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🎨 UI/UX
+- Fully responsive (mobile, tablet, desktop)
+- Gradient animations
+- Clean modern design
+- Loading states & toast notifications
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ⚙️ Tech Stack
+
+- ⚡ Next.js (App Router)
+- 🎨 Tailwind CSS
+- 🧩 HeroUI
+- 🔐 Better Auth
+- 🍃 MongoDB
+- 🔔 React Toastify
+- 🎯 React Icons
+
+---
+
