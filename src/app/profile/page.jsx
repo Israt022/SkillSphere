@@ -8,8 +8,11 @@ import Link from "next/link";
 import React from "react";
 
 const ProfilePage = () => {
-  const userData = authClient.useSession();
-  const user = userData.data?.user;
+  const {data,isPending } = authClient.useSession();
+  if(isPending){
+      return <p className="text-center mt-20">Loading...</p>;
+    }
+    const user = data?.user;
   return (
     <div className="container mx-auto pt-20">
       <Card className="p-8 shadow-md text-center w-8/12 mx-auto border border-indigo-500/50 shadow-indigo-200">
@@ -26,7 +29,7 @@ const ProfilePage = () => {
         {/* Info */}
         <h2 className="text-2xl font-bold mt-4">{user.name}</h2>
 
-        <p className="text-gray-500">{user.email}</p>
+        <p className="text-gray-500">{user?.email}</p>
 
         {/* Button */}
         <div className="mt-6">
