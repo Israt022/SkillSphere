@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <section
       style={{ backgroundImage: `url(${bgBanner.src})` }}
-      className="bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center"
+      className="bg-cover bg-center bg-no-repeat min-h-[80vh] w-full flex items-center"
     >
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10 py-24">
         {/* Left Content */}

@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch including HTML, CSS, JavaScript, React, and backend basics.",
-    "image": "https://i.postimg.cc/3J7F7Q0Q/web-dev.jpg",
+    "image": "https://images.unsplash.com/photo-1763568258320-c954a19683e3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2ViJTIwRGV2ZWxvcG1lbnQlMjBCb290Y2FtcHxlbnwwfHwwfHx8MA%3D%3D",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Master UI/UX design principles, wireframing, prototyping, and Figma tools.",
-    "image": "https://i.postimg.cc/XYyW7KQd/ui-ux.jpg",
+    "image": "https://media.licdn.com/dms/image/v2/D4E22AQHpQ66DEAwS0A/feedshare-shrink_1280/B4EZqbDjxwHoAs-/0/1763537994232?e=2147483647&v=beta&t=ysJcEQ1mTQNMJt3mz42rSpCCCw2nDYBLqPNIpmCCJiI",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Learn SEO, social media marketing, email campaigns, and digital advertising strategies.",
-    "image": "https://i.postimg.cc/8cKz3QnM/marketing.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1661425715124-310ec1b49b8a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8RGlnaXRhbCUyME1hcmtldGluZyUyMEZ1bmRhbWVudGFsc3xlbnwwfHwwfHx8MA%3D%3D",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Deep dive into React.js including hooks, state management, routing, and performance optimization.",
-    "image": "https://i.postimg.cc/4N7kY6Zs/react.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1661425715124-310ec1b49b8a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8RGlnaXRhbCUyME1hcmtldGluZyUyMEZ1bmRhbWVudGFsc3xlbnwwfHwwfHx8MA%3D%3D",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Start programming with Python. Learn syntax, logic building, and small projects.",
-    "image": "https://i.postimg.cc/2S7vW9kL/python.jpg",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UHl0aG9uJTIwZm9yJTIwQmVnaW5uZXJzfGVufDB8fDB8fHww",
     "category": "Programming"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.8,
     "level": "Advanced",
     "description": "Master DSA concepts including arrays, linked lists, trees, graphs, and sorting algorithms.",
-    "image": "https://i.postimg.cc/9Fq2kVbH/dsa.jpg",
+    "image": "https://plus.unsplash.com/premium_photo-1764691417052-a4d2be891e89?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8RGF0YSUyMFN0cnVjdHVyZXMlMjAlMjYlMjBBbGdvcml0aG1zfGVufDB8fDB8fHww",
     "category": "Computer Science"
   }
 ]
