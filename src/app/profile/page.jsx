@@ -4,7 +4,7 @@ import UpdateUserModal from "@/components/UpdateUserModal";
 import { authClient } from "@/lib/auth-client";
 import { Button, Card } from "@heroui/react";
 import Image from "next/image";
-import Link from "next/link";
+import userAvatar from "@/assets/user.webp";
 import React from "react";
 
 const ProfilePage = () => {
@@ -19,7 +19,7 @@ const ProfilePage = () => {
         {/* Avatar */}
         <div className="w-32 h-32 mx-auto relative">
           <Image
-            src={user?.image}
+            src={user?.image || userAvatar}
             alt={user?.name}
             fill
             className="rounded-full object-cover"
