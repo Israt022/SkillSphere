@@ -5,13 +5,17 @@ import { useState } from "react";
 import NavLinks from "./NavLinks";
 import { FcGraduationCap } from "react-icons/fc";
 import Image from "next/image";
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+  console.log(user);
+  const handleLogout = async() => {
+    await authClient.signOut();
   };
 
   return (
@@ -44,9 +48,9 @@ const Navbar = () => {
           {/* Right Side */}
           <div className="hidden md:flex items-center space-x-3">
             {/* Auth UI */}
-            {/* {!isLoggedIn ? ( */}
+            {!user ? (
             <>
-              {/* <Link
+              <Link
                   href="/signin"
                   className="px-3 py-1 border rounded-md hover:bg-gray-100"
                 >
@@ -58,27 +62,35 @@ const Navbar = () => {
                   className="px-3 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
                 >
                   Signup
-                </Link> */}
+                </Link>
             </>
-            {/* ) : ( */}
-            <div className="flex items-center gap-1">
+             ) : ( 
+            <div className="flex items-center gap-3">
               {/* Avatar */}
-              <Image
-                src={userAvatar}
-                // { user?.image || userAvatar}
+              <Avatar>
+                <Avatar.Image
+                  alt={user?.name}
+                  sizes="sm"
+                  src={ user?.image || userAvatar}
+                />
+              <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+              </Avatar>
+              {/* <Image
+                src={ user?.image || userAvatar}
                 width={40}
                 height={40}
                 alt="User Image"
                 className="rounded-full"
-              />
-              <button
+              /> */}
+              <Button
                 onClick={handleLogout}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-500 rounded-md border border-red-500 cursor-pointer"
+                size="sm"
+                variant="danger"
               >
                 Logout
-              </button>
+              </Button>
               {/* Dropdown */}
-              {/* <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-md opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-md opacity-0 group-hover:opacity-100 transition">
                   <Link
                     href="/profile"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -92,9 +104,9 @@ const Navbar = () => {
                   >
                     Logout
                   </button>
-                </div> */}
+                </div> 
             </div>
-            {/* )} */}
+            )} 
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,28 +133,29 @@ const Navbar = () => {
               My Profile
             </NavLinks>
 
-            {/* {!isLoggedIn ? ( */}
-            {/* <>
+            {!user ? (
+             <>
                 <Link href="/signin" className="hover:text-indigo-600">
                   Login
                 </Link>
                 <Link href="/signup" className="hover:text-indigo-600">
                   Signup
                 </Link>
-              </> */}
-            {/* ) : ( */}
-            <Image
-              src={userAvatar}
-              // { user?.image || userAvatar}
-              width={40}
-              height={40}
-              alt="User Image"
-              className="rounded-full"
-            />
-            <button onClick={handleLogout} className="text-red-500 text-left cursor-pointer">
-              Logout
-            </button>
-            {/* )} */}
+              </> 
+             ) : ( 
+              <>
+              <Image
+                src={ user?.image || userAvatar}
+                width={40}
+                height={40}
+                alt="User Image"
+                className="rounded-full"
+              />
+              <button onClick={handleLogout} className="text-red-500 text-left cursor-pointer">
+                Logout
+              </button>
+              </>
+            )} 
           </div>
         )}
       </div>
