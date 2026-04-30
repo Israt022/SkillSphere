@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { CgGoogle } from "react-icons/cg";
 import { toast } from "react-toastify";
 
 const SignIn = () => {
@@ -34,6 +35,12 @@ const SignIn = () => {
 
     console.log({data,error});
   };
+
+  const handleGoogleSignIn = async() => {
+    await authClient.signIn.social({
+        provider: "google",
+    });
+  }
 
   return (
     <Card className="border mx-auto w-125 mt-28 py-10">
@@ -90,12 +97,14 @@ const SignIn = () => {
           </Button>
         </div>
       </Form>
-      <p className="mt-4 text-center">
+        <p className="mt-4 text-center">
           Dont have account?{" "}
           <Link href={"/signup"} className="text-red-500 ">
             Register
           </Link>{" "}
         </p>
+        <p className="text-center">Or,</p>
+        <Button onClick={handleGoogleSignIn} variant="outline" className="flex items-center gap-2 w-full"><CgGoogle size={48}/> Sign in with Google</Button>
     </Card>
   );
 }

@@ -12,6 +12,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { CgGoogle } from "react-icons/cg";
 import { toast } from "react-toastify";
 
 const SignUp = () => {
@@ -40,6 +41,11 @@ const SignUp = () => {
 
         console.log({data,error});
     };
+    const handleGoogleSignIn = async() => {
+        await authClient.signIn.social({
+            provider: "google",
+        });
+    }
 
     return (
         <Card className="border mx-auto w-125 mt-28 py-10">
@@ -114,6 +120,8 @@ const SignUp = () => {
             Login
             </Link>{" "}
         </p>
+        <p className="text-center">Or,</p>
+        <Button onClick={handleGoogleSignIn} variant="outline" className="flex items-center gap-2 w-full"><CgGoogle size={48}/> Sign in with Google</Button>
         </Card>
     );
 }
