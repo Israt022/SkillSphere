@@ -8,7 +8,7 @@ const PopularCourses = async () => {
   const courses = await getCourses()
   const topCourses = courses.sort((a, b) => b.rating - a.rating).slice(0, 3);
 
-  console.log("Top Courser ->", topCourses);
+//   console.log("Top Courser ->", topCourses);
   return (
     <div className="w-8/12 lg:w-7xl mx-auto mt-10">
       <h1 className="text-4xl text-center my-2 font-bold bg-gradient-to-r from-indigo-500 via-purple-400 to-blue-400 text-transparent bg-clip-text">

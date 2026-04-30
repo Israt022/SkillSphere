@@ -4,7 +4,7 @@ import React from 'react';
 
 const Courses = async() => {
     const courses = await getCourses();
-    console.log("Courses ",courses);
+    // console.log("Courses ",courses);
     return (
         <div className='container mx-auto pt-20'>
             <h1 className="text-4xl text-center my-2 font-bold bg-gradient-to-r from-indigo-500 via-purple-400 to-blue-400 text-transparent bg-clip-text">
