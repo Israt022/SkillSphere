@@ -1,55 +1,78 @@
-import Link from "next/link";
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
 import bgBanner from "@/assets/bg-banner.svg";
 import BannerImg from "@/assets/bannerRight.jpg";
-import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
   return (
-    <section
-      style={{ backgroundImage: `url(${bgBanner.src})` }}
-      className="bg-cover bg-center bg-no-repeat min-h-[80vh] w-full flex items-center"
+    <div
+      className="min-h-[80vh] flex items-center bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bgBanner.src})`,
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10 py-24">
-        {/* Left Content */}
-        <div className="flex-1">
-          <h1 className="text-4xl md:text-5xl font-bold animate-pulse">
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">Upgrade Your Skills Today</span> 🚀
-          </h1>
+      {/* overlay */}
+      <div className="w-full bg-black/60 py-36">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
 
-          <p className="mt-4 text-lg text-gray-200">
-            Learn from Industry Experts and build your future with modern
-            skill-based courses.
-          </p>
+          {/* Left Content */}
+          <div className="flex-1 text-center md:text-left space-y-5">
 
-          <div className="mt-6 flex gap-4">
-            <Link
-              href="/courses"
-              className="bg-white text-indigo-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition"
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl font-bold text-white"
             >
-              Browse Courses
-            </Link>
+              𝓢𝓴𝓲𝓵𝓵𝓢𝓹𝓱𝓮𝓻𝓮
+            </motion.h1>
 
-            <Link
-              href="/signup"
-              className="border border-white text-white  px-6 py-3 rounded-md hover:bg-white hover:text-indigo-600 transition"
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-gray-200 text-lg"
             >
-              Get Started
-            </Link>
+              Upgrade Your Skills Today 🚀 Learn from industry experts and become job-ready.
+            </motion.p>
+
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <Link
+                href="/courses"
+                className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full font-semibold transition"
+              >
+                Explore Courses
+              </Link>
+            </motion.div>
+
           </div>
-        </div>
 
-        {/* Right Image */}
-        <div className="flex-1">
-          <Image
-            src={BannerImg}
-            alt="Banner-right-image"
-            width={500}
-            height={400}
-            className="rounded-lg shadow-lg animate-pulse"
-          />
+          {/* Right Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 flex justify-center"
+          >
+            <Image
+              src={BannerImg}
+              alt="banner image"
+              width={500}
+              height={400}
+              className="rounded-xl shadow-xl"
+            />
+          </motion.div>
+
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
