@@ -47,14 +47,14 @@ const Navbar = () => {
             {/* {!isLoggedIn ? ( */}
             <>
               {/* <Link
-                  href="/login"
+                  href="/signin"
                   className="px-3 py-1 border rounded-md hover:bg-gray-100"
                 >
                   Login
                 </Link>
 
                 <Link
-                  href="/register"
+                  href="/signup"
                   className="px-3 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
                 >
                   Signup
@@ -123,10 +123,10 @@ const Navbar = () => {
 
             {/* {!isLoggedIn ? ( */}
             {/* <>
-                <Link href="/login" className="hover:text-indigo-600">
+                <Link href="/signin" className="hover:text-indigo-600">
                   Login
                 </Link>
-                <Link href="/register" className="hover:text-indigo-600">
+                <Link href="/signup" className="hover:text-indigo-600">
                   Signup
                 </Link>
               </> */}

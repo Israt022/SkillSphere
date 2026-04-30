@@ -30,7 +30,7 @@ const Banner = () => {
             </Link>
 
             <Link
-              href="/register"
+              href="/signup"
               className="border border-white text-white  px-6 py-3 rounded-md hover:bg-white hover:text-indigo-600 transition"
             >
               Get Started
