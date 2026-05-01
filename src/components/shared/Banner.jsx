@@ -36,7 +36,8 @@ const Banner = () => {
               transition={{ delay: 0.3 }}
               className="text-gray-200 text-lg"
             >
-              Upgrade Your Skills Today 🚀 Learn from industry experts and become job-ready.
+              Upgrade Your Skills Today 🚀 
+              Learn from industry experts and become job-ready.
             </motion.p>
 
             <motion.div
