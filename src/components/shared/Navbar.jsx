@@ -7,15 +7,18 @@ import { FcGraduationCap } from "react-icons/fc";
 import Image from "next/image";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
 
   const {data,isPending} = authClient.useSession();
   const user = data?.user;
-  console.log({user,isPending});
+  // console.log({user,isPending});
   const handleLogout = async() => {
     await authClient.signOut();
+    router.push("/signin")
   };
 
   return (
@@ -83,7 +86,7 @@ const Navbar = () => {
                 className="rounded-full"
               />
               <Button
-                onClick={async()=> await authClient.signOut()}
+                onClick={handleLogout}
                 size="sm"
                 variant="danger"
               >

@@ -29,6 +29,7 @@ const ProfilePage = () => {
             src={user?.image || userAvatar}
             alt={user?.name || "User Avatar"}
             fill
+            sizes="(max-width: 768px) 100vw, 200px"
             className="rounded-full object-cover"
           />
         </div>
