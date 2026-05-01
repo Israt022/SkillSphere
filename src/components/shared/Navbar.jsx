@@ -78,22 +78,20 @@ const Navbar = () => {
                 />
               <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
               </Avatar> */}
-              <Image
-                src={ user?.image || userAvatar}
-                width={40}
-                height={40}
-                alt="User Image"
-                className="rounded-full"
-              />
-              <Button
-                onClick={handleLogout}
-                size="sm"
-                variant="danger"
-              >
-                Logout
-              </Button>
+              <>
+                <Image
+                  src={ user?.image || userAvatar}
+                  width={40}
+                  height={40}
+                  alt="User Image"
+                  className="rounded-full"
+                />
+                <button onClick={handleLogout} className="bg-red-500 text-white px-3 py-2 rounded-full text-left cursor-pointer">
+                  Logout
+              </button>
+              </>
               {/* Dropdown */}
-              <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-md opacity-0 group-hover:opacity-100 transition">
+              {/* <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-md opacity-0 group-hover:opacity-100 transition">
                   <Link
                     href="/profile"
                     className="block px-4 py-2 hover:bg-gray-100"
@@ -101,13 +99,10 @@ const Navbar = () => {
                     My Profile
                   </Link>
 
-                  <button
-                    onClick={async()=> await authClient.signOut()}
-                    className="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-500"
-                  >
+                  <button onClick={handleLogout} className="bg-red-500 text-white text-left cursor-pointer">
                     Logout
                   </button>
-                </div> 
+                </div>  */}
             </div>
             )} 
           </div>
@@ -124,24 +119,24 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden flex flex-col space-y-3 pb-4">
-            <NavLinks href="/" className="hover:text-indigo-600">
+            <Link href="/" className="hover:text-indigo-600" onClick={() => setMenuOpen(false)}>
               Home
-            </NavLinks>
+            </Link>
 
-            <NavLinks href="/courses" className="hover:text-indigo-600">
+            <Link href="/courses" className="hover:text-indigo-600" onClick={() => setMenuOpen(false)}>
               Courses
-            </NavLinks>
+            </Link>
 
-            <NavLinks href="/profile" className="hover:text-indigo-600">
+            <Link href="/profile" className="hover:text-indigo-600" onClick={() => setMenuOpen(false)}>
               My Profile
-            </NavLinks>
+            </Link>
 
             {!user ? (
              <>
-                <Link href="/signin" className="hover:text-indigo-600">
+                <Link href="/signin" className="hover:text-indigo-600" onClick={() => setMenuOpen(false)}>
                   Login
                 </Link>
-                <Link href="/signup" className="hover:text-indigo-600">
+                <Link href="/signup" className="hover:text-indigo-600" onClick={() => setMenuOpen(false)}>
                   Signup
                 </Link>
               </> 

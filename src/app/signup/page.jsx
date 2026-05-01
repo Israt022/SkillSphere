@@ -30,6 +30,7 @@ const SignUp = () => {
             email, // required
             password, // required
             image,
+            createSession: false,
         });
         if (error) {
         toast.error(error.message);
