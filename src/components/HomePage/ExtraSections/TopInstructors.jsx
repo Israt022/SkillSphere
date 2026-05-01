@@ -37,7 +37,7 @@ const TopInstructors = () => {
       
       {/* Heading */}
       <h2 className="text-3xl font-bold text-center mb-3">
-        🏆 Top Instructors
+        Top Instructors
       </h2>
 
       <p className="text-center text-gray-500 mb-10">

@@ -13,6 +13,13 @@ const ProfilePage = () => {
       return <p className="text-center mt-20">Loading...</p>;
     }
     const user = data?.user;
+  if (!user) {
+    return (
+      <p className="text-center mt-20">
+        Please login to view profile
+      </p>
+  );
+}
   return (
     <div className="container mx-auto pt-20">
       <Card className="p-8 shadow-md text-center w-8/12 mx-auto border border-indigo-500/50 shadow-indigo-200">
@@ -20,7 +27,7 @@ const ProfilePage = () => {
         <div className="w-32 h-32 mx-auto relative">
           <Image
             src={user?.image || userAvatar}
-            alt={user?.name}
+            alt={user?.name || "User Avatar"}
             fill
             className="rounded-full object-cover"
           />

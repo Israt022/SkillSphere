@@ -1,4 +1,5 @@
 import CourseCards from '@/components/cards/CourseCards';
+import SearchFieldSection from '@/components/cards/SearchFieldSection';
 import { getCourses } from '@/lib/courses';
 import React from 'react';
 
@@ -10,10 +11,11 @@ const Courses = async() => {
             <h1 className="text-4xl text-center my-2 font-bold bg-gradient-to-r from-indigo-500 via-purple-400 to-blue-400 text-transparent bg-clip-text">
                 All Courses
             </h1>
+            <SearchFieldSection courses={courses}/>
             <div className="grid lg:grid-cols-3 gap-6 items-center">
-                {courses.map((course,index) => (
+                {courses.map((course) => (
                     <CourseCards
-                        key={course.id} 
+                        key={course?.id} 
                         course={course} 
                         // isHighlighted={index === 1}
                     />))}
