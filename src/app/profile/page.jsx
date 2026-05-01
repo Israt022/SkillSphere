@@ -6,18 +6,18 @@ import { Button, Card } from "@heroui/react";
 import Image from "next/image";
 import userAvatar from "@/assets/user.webp";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const ProfilePage = () => {
   const {data,isPending } = authClient.useSession();
+  const router = useRouter();
   if(isPending){
       return <p className="text-center mt-20">Loading...</p>;
     }
     const user = data?.user;
   if (!user) {
     return (
-      <p className="text-center mt-20">
-        Please login to view profile
-      </p>
+      router.push("/signin")
   );
 }
   return (
