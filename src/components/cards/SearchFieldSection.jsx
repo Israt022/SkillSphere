@@ -25,9 +25,9 @@ const SearchFieldSection = ({ courses = [] }) => {
     };
 
     return (
-        <div className="flex justify-center items-center gap-3 my-6 px-3 py-2 lg:border border-indigo-500/30 w-8/12 mx-auto rounded-lg lg:shadow shadow-indigo-500/50">
+        <div className="flex flex-wrap justify-center items-center gap-3 my-6 px-3 py-2 lg:border border-indigo-500/30 w-10/12 lg:w-8/12 mx-auto rounded-lg lg:shadow shadow-indigo-500/50">
             <SearchField>
-                <SearchField.Group className="w-full flex items-center gap-2 border border-gray-500/50 px-3 py-2 rounded-lg">
+                <SearchField.Group className="w-10/12 mx-auto lg:w-full flex items-center gap-2 border border-gray-500/50 px-3 py-2 rounded-lg">
 
                     <SearchField.SearchIcon />
 
