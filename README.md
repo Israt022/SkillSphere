@@ -61,6 +61,8 @@ The platform is built with **Next.js App Router**, **Tailwind CSS**, **HeroUI**,
 - 🍃 MongoDB
 - 🔔 React Toastify
 - 🎯 React Icons
+- 🎞️ Framer Motion (for smooth animations)
+- 🎠 Swiper.js (for sliders & carousels)
 
 ---
 
