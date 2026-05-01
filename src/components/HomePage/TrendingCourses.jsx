@@ -20,10 +20,11 @@ const TrendingCourses = ({ courses }) => {
         spaceBetween={20}
         slidesPerView={3}
         loop={true}
-        speed={800}  
+        speed={3000}  
         autoplay={{
-          delay: 2000,
+          delay: 0,
           disableOnInteraction: false,
+          pauseOnMouseEnter: false,
         }}
       >
         {courses.map((course) => (
